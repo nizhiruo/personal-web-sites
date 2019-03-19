@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="images/logo.jpg" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <link rel="stylesheet" href="css/work.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <title>个人网站</title>
+</head>
+<body>
+    <div class="context" id="context">
+        <ul class="nav nav-tabs nav-justified">
+            <span><a href="#context">首页</a></span>
+            <span><a href="#aboutme">关于我</a></span>
+            <span><a href="#content">兴趣爱好</a></span>
+            <span><a href="#homework">作业展示</a></span>
+            <span><a href="#phone">联系方式</a></span>
+        </ul>
+        <!-- <img src="../images/星空.jpg" alt=""> -->
+        <marquee behavior="alternate" hspace="600px">
+            <p>大家好！</p>
+            <p>我是一名前端工程师。</p>
+        </marquee>
+    </div>
+    <div class="ME">
+        <div class="me" id="aboutme">
+            <h1>关于我:</h1>
+            <img src="images/龙瞎.jpg" alt="">
+            <div class="me-situation">
+                <p>姓名：倪志若</p>
+                <p>籍贯：山西</p>
+                <p>学校：武汉工程大学</p>
+                <p>专业：计算机工程</p>
+                <p>方向：前端工程师</p>
+            </div>
+        </div>
+    </div>
+    <div class="CON">
+        <div class="CONTENT" id="content">
+            <h1>兴趣爱好：玩游戏，美食，旅行</h1>
+            <div class="content">
+                <div id="list">
+                    <img src="images/1.jpg" alt="">
+                    <img src="images/2.jpg" alt="">
+                    <img src="images/4.jpg" alt="">
+                    <img src="images/5.jpg" alt="">
+                    <img src="images/6.jpg" alt="">
+                    <img src="images/8.jpg" alt="">
+                    <img src="images/9.jpg" alt="">
+                    <img src="images/10.jpg" alt="">
+                </div>
+                <button id="prev"></button>
+                <button id="next"></button>
+                <div id="btns">
+                    <span class="current"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="CONTENT-down">
+                <img src="images/7.jpg" alt="">
+                <img src="images/11.jpg" alt="">
+                <img src="images/12.jpg" alt="">
+                <img src="images/13.jpg" alt="">
+                <img src="images/14.jpg" alt="">
+                <img src="images/15.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="homework" id="homework">
+        <h1>作业展示</h1>
+        <a href="html/index.html"><img src="images/作业1.png" alt=""></a>
+        <a href="html/homework02.html"><img src="images/作业2.png" alt=""></a>
+        <a href="html/homework03.html"><img src="images/作业3.jpg" alt=""></a>
+        <a href="html/homework04.html"><img src="images/作业4.png" alt=""></a>
+        <a href="html/homework05.html"><img src="images/作业5.png" alt=""></a>
+        <a href="html/homework06.html"><img src="images/作业6.png" alt=""></a>
+        <a href="html/homework07.html"><img src="images/作业7.png" alt=""></a>
+        <a href="html/homework08.html"><img src="images/作业8.png" alt=""></a>
+        <a href="html/木兮地板.html"><img src="images/作业9.png" alt=""></a>
+    </div>
+    <div class="contact" id="phone">
+        <h1>联系方式</h1>
+        <div class="contact-phone">
+            <img src="images/phone.png" alt="">
+            <p>12365478912</p>
+        </div>
+        <div class="contact-qq">
+            <img src="images/qq.jpg" alt="">
+            <div class="contact-qqer">
+                <img src="images/QQer.jpg" alt="">
+            </div>
+        </div>
+        <div class="contact-weixin">
+            <img src="images/weixin.png" alt="">
+            <div class="contact-weixiner">
+                <img src="images/微信.png" alt="">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+            $(function () {
+                var index = 0;
+                $("#next").click(function () {
+                    index++;
+                    if (index > 7) {
+                        index = 0;
+                    }
+                    bannerAnimate(index);
+                })
+                $("#prev").click(function () {
+                    index--;
+                    if (index < 0) {
+                        index = 7;
+                    }
+                    bannerAnimate(index);
+                })
+                $("#btns>span").click(function(){
+                    var currentIndex = $(this).index();
+                    bannerAnimate(currentIndex);
+                    index = currentIndex;
+                })
+                function bannerAnimate(index) {
+                    $("#list>img").eq(index).fadeIn().siblings().fadeOut();
+                    $("#btns>span").eq(index).addClass("current").siblings().removeClass("current")
+                }
+            })
+        </script>
+</body>
+</html>
