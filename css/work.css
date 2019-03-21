@@ -17,7 +17,13 @@ body{
 
 .tips{width:702px;margin:0 auto;line-height:24px;padding-top:10px;}
 .bredcolor{color:#fff;}
-.menuHolder {width:100px; height:100px; margin:0px 0 0px 0px; position:relative;z-index:100;}
+.menuHolder {
+    width:100px; 
+    height:100px; 
+    margin:0px 0 0px 0px; 
+    position:relative;
+    z-index:100;
+}
 .menuHolder ul {padding:0; margin:0; list-style:none; position:absolute; left:0; top:0; width:0; height:0;}
 .menuHolder ul li {border-radius:0 0 300px 0; width:0; height:0;}
 .menuHolder ul li a {color:#000; text-decoration:none; font:bold 13px/30px arial, sans-serif; text-align:center; box-shadow:-5px 5px 5px rgba(0,0,0,0.4);
@@ -27,7 +33,7 @@ body{
 -o-transform-origin:0 0;
 transform-origin:0 0;
 }
-.menuHolder ul.p1 li {position:absolute; left:0; top:0;}
+.menuHolder ul.p1 li {position: fixed; left:0; top:0;}
 .menuHolder ul.p2 {z-index:-1;}
 .menuHolder ul.p3 {z-index:-1;}
 .menuHolder li.s1 > a {position:absolute; display:block; width:100px; height:100px; background:#c8c8c8; border-radius:0 0 100px 0;}
