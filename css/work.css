@@ -521,6 +521,7 @@ h1{
     position: absolute;
     left: 100px;
     top: 100px;
+    cursor: pointer;
 }
 .contact>.contact-phone p{
     font-size: 30px;
@@ -541,6 +542,7 @@ h1{
     position: absolute;
     left: 450px;
     top: 100px;
+    cursor: pointer;
 }
 .contact>.contact-qq .contact-qqer{
     position: absolute;
@@ -563,6 +565,7 @@ h1{
     position: absolute;
     left: 800px;
     top: 100px;
+    cursor: pointer;
 }
 .contact>.contact-weixin .contact-weixiner{
     position: absolute;
